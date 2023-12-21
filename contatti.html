@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contatti - Etichetta Discografica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Benvenuto in BONGUNESS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="artisti.html">Artisti</a></li>
+                <li><a href="album.html">Album</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contatti">
+
+            
+            <h2>Invia un messaggio / Invia la tua demo</h2>
+            <form action="processa_form.php" method="post" enctype="multipart/form-data">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="messaggio">Messaggio:</label>
+                <textarea id="messaggio" name="messaggio" required></textarea>
+                
+                <label for="demo">Allega la tua demo (se desideri):</label>
+                <input type="file" id="demo" name="demo">
+                
+                <input type="submit" value="Invia">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 BONGUNESS</p>
+    </footer>
+
+</body>
+
+</html>

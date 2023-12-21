@@ -1,0 +1,167 @@
+/* Impostazioni generali */
+body {
+    background-color: #000; /* Sfondo nero */
+    color: #fff; /* Testo bianco */
+}
+
+/* Stile header */
+header {
+    background-color: #111; /* Colore di sfondo per l'header (nero più scuro) */
+    padding: 20px;
+}
+
+/* Resto dello stile rimane invariato */
+/* ... */
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Stile sezioni principali */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Stile delle sezioni "Ultimi Album" e "Artisti in Evidenza" */
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.album,
+.artista {
+    width: calc(30% - 20px); /* Utilizza il 30% della larghezza - margini */
+    margin: 10px;
+    display: inline-block;
+    text-align: left; /* Allineamento a sinistra */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box; /* Considera il padding nel calcolo della larghezza */
+    vertical-align: top; /* Allineamento in alto */
+    position: relative; /* Posizione relativa per link assoluto */
+}
+
+.album img,
+.artista img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Risolve lo spazio bianco sotto le immagini */
+}
+
+.album a,
+.artista a {
+    position: absolute; /* Posizione assoluta per il link */
+    bottom: 10px; /* Spazio dal basso */
+    left: 50%; /* Centratura orizzontale */
+    transform: translateX(-50%); /* Centratura orizzontale precisa */
+    background-color: #1DB954; /* Colore di sfondo di Spotify */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.album a:hover,
+.artista a:hover {
+    background-color: #169147; /* Cambio colore al passaggio del mouse */
+}
+
+/* Reset margine per l'ultimo elemento di ogni riga */
+.album:nth-child(3n+1),
+.artista:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+/* Media query per il responsive design */
+@media (max-width: 768px) {
+    .album,
+    .artista {
+        width: calc(50% - 20px); /* Utilizza il 50% della larghezza - margini */
+    }
+
+    /* Reset margine per il responsive design */
+    .album:nth-child(2n+1),
+    .artista:nth-child(2n+1) {
+        margin-left: 0;
+    }
+}
+
+/* Stile footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Stili per la sezione delle news */
+
+#news {
+    padding: 20px;
+    background-color: #333; /* Sfondo grigio scuro */
+    color: #fff; /* Testo in bianco */
+    max-height: 400px; /* Altezza massima con possibilità di scorrimento */
+    overflow-y: auto; /* Aggiunge la barra di scorrimento verticale se necessario */
+}
+
+.news-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555; /* Colore del bordo */
+    padding-bottom: 10px;
+}
+
+.news-item h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.news-item p {
+    margin-bottom: 5px;
+    color: #ccc; /* Colore del testo del paragrafo */
+}
+
+
+/* Stile per centrare la navbar */
+header nav {
+    display: flex;
+    justify-content: center; /* Centra gli elementi lungo l'asse orizzontale */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0; /* Rimuove il margine dal'ultimo elemento per evitare spaziature extra */
+  }
+
+
+header img {
+    display: block;
+    margin: 0 auto 20px; /* Centra l'immagine */
+}  
